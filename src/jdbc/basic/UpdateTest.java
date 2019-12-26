@@ -5,13 +5,13 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class InsertTest {
+public class UpdateTest {
 
 	public static void main(String[] args) {
 			String url = "jdbc:oracle:thin:@70.12.115.70:1521:xe";
 			String user = "scott";
 			String password = "tiger";
-			String sql = "insert into tb_board values(board_seq.nextval,'jang','연습','연습',sysdate,0)";
+			String sql = "update tb_board set id = 'kang' where boardnum = 2";
 			try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			System.out.println("드라이버 로딩 성공");

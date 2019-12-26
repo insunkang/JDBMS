@@ -5,13 +5,15 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class InsertTest {
+public class DeleteTest {
 
 	public static void main(String[] args) {
 			String url = "jdbc:oracle:thin:@70.12.115.70:1521:xe";
 			String user = "scott";
 			String password = "tiger";
-			String sql = "insert into tb_board values(board_seq.nextval,'jang','연습','연습',sysdate,0)";
+			StringBuffer sql = new StringBuffer();
+			sql.append("delete tb_board ");
+			sql.append("where boardnum=23");
 			try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			System.out.println("드라이버 로딩 성공");
@@ -24,8 +26,8 @@ public class InsertTest {
 			System.out.println("SQL을 실행하기 위한 객체 정보: "+stmt);
 			
 			//4. sql 실행하기
-			int result = stmt.executeUpdate(sql);
-			System.out.println(result+"개 행 삽입 성공");
+			int result = stmt.executeUpdate(sql.toString());
+			System.out.println(result+"개 행 삭제 성공");
 			
 			}catch(ClassNotFoundException e){
 						
