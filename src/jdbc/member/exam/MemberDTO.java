@@ -99,5 +99,33 @@ public class MemberDTO {
 	public void setDeptno(String deptno) {
 		this.deptno = deptno;
 	}
+
+
+
+
+	public Date getHiredate() {
+		return hiredate;
+	}
+
+
+
+
+	public void setHiredate(Date hiredate) {
+		this.hiredate = hiredate;
+	}
+
+
+
+
+	public int getPoint() {
+		return point;
+	}
+
+
+
+
+	public void setPoint(int point) {
+		this.point = point;
+	}
 	
 }

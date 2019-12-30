@@ -1,16 +1,16 @@
-package jdbc.member.exam;
+package jdbc.board.exam2;
 
 import java.util.Scanner;
 public class DAOTest {
 	public static void main(String[] args) {
 		Scanner key = new Scanner(System.in);
-		System.out.println("******인사관리시스템********");
-		System.out.println("1. 사원등록");
-		System.out.println("2. 사원조회");
-		System.out.println("3. 사원수정");
-		System.out.println("4. 사원퇴사");
-		System.out.println("5. 주소로 사원 검색");
-		System.out.println("6.로그인");
+		System.out.println("******게시판********");
+		System.out.println("1. 게시글등록");
+		System.out.println("2. 게시글전체목록조회");
+		System.out.println("3. 게시글수정");
+		System.out.println("4. 게시글삭제");
+		System.out.println("5. 제목으로 게시글 검색");
+		System.out.println("6. 게시글상세보기");
 		System.out.print("원하는 작업을 선택하세요:");
 		int choice  = key.nextInt();
 		show(choice);
@@ -31,11 +31,11 @@ public class DAOTest {
 				ui.deleteMenu();
 				break;
 			case 5:
-				ui.findByAddrMenu();
+				ui.searchMenu();
 				break;
 			case 6:
-				ui.loginMenu();//menuUI에 추가
-				break;		   //로그인 성공 실패 출력하기
+				ui.readMenu();
+				break;
 		}
 	}
 }
